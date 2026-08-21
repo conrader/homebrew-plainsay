@@ -8,8 +8,14 @@ brew tap conrader/plainsay
 brew install --cask plainsay
 ```
 
-This always installs the latest notarized build. Plainsay also updates
-itself in place via Sparkle, so `brew upgrade` isn't required day to day.
+Each cask revision installs a specific notarized release with a verified
+checksum. Plainsay also updates itself in place via Sparkle, so Homebrew
+upgrades aren't required day to day. To upgrade through Homebrew instead:
+
+```sh
+brew update
+brew upgrade --cask --greedy plainsay
+```
 
 See [plainsay.app](https://plainsay.app) and the
 [main repository](https://github.com/conrader/plainsay) for everything else.
