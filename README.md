@@ -3,6 +3,9 @@
 Personal Homebrew tap for [Plainsay](https://github.com/conrader/plainsay) —
 free, MIT-licensed, on-device dictation for macOS.
 
+**[Star Plainsay on GitHub ★](https://github.com/conrader/plainsay)** if it
+earns a place in your menu bar. Stars help more Mac users discover the app.
+
 ```sh
 brew install --cask conrader/plainsay/plainsay
 ```
