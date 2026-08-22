@@ -1,0 +1,43 @@
+name: Cask audit
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions: {}
+
+defaults:
+  run:
+    shell: bash -xeuo pipefail {0}
+
+jobs:
+  audit:
+    runs-on: macos-26
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@fd832223f9f99ebf0244dd20658680e5d4aca049 # 2026.08.03.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Clean runner
+        run: brew test-bot --only-cleanup-before
+
+      - name: Check runner
+        run: brew test-bot --only-setup
+
+      - name: Check tap syntax
+        run: brew test-bot --only-tap-syntax
+
+      - name: Strict online cask audit
+        run: brew audit --cask --strict --online conrader/plainsay/plainsay
+
+      - name: Check latest version
+        run: brew livecheck --cask conrader/plainsay/plainsay
