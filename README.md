@@ -4,9 +4,11 @@ Personal Homebrew tap for [Plainsay](https://github.com/conrader/plainsay) —
 free, MIT-licensed, on-device dictation for macOS.
 
 ```sh
-brew tap conrader/plainsay
-brew install --cask plainsay
+brew install --cask conrader/plainsay/plainsay
 ```
+
+The fully qualified command adds the tap automatically and installs only the
+named cask.
 
 Each cask revision installs a specific notarized release with a verified
 checksum. Plainsay also updates itself in place via Sparkle, so Homebrew
