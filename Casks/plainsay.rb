@@ -1,6 +1,6 @@
 cask "plainsay" do
-  version "0.2.29"
-  sha256 "80c36de5ba162d1d96f936f0921d4c6d4fb0ecd52ebcdf7fb5910d83766ca037"
+  version "0.2.30"
+  sha256 "3e8a22597b4a4287ac8327a355c097132c1673a882bbd9df0c1fcf0211a1ca24"
 
   url "https://github.com/conrader/plainsay/releases/download/v#{version}/Plainsay-#{version}.dmg",
       verified: "github.com/conrader/plainsay/"
