@@ -2,8 +2,7 @@ cask "plainsay" do
   version "0.2.38"
   sha256 "eed9697513c097446bd28ca81d0a09bd8175d791f1c4d09ec45c4f1d3e25bec9"
 
-  url "https://github.com/conrader/plainsay/releases/download/v#{version}/Plainsay-#{version}.dmg",
-      verified: "github.com/conrader/plainsay/"
+  url "https://github.com/conrader/plainsay/releases/download/v#{version}/Plainsay-#{version}.dmg"
   name "Plainsay"
   desc "Free, open-source, on-device dictation"
   homepage "https://plainsay.app/"
@@ -14,8 +13,8 @@ cask "plainsay" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "Plainsay.app"
 
